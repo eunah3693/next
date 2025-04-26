@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 async function getMovies(){
@@ -10,12 +9,13 @@ export default async function Movie() {
     const movies = await getMovies();
     return (
         <ul>
-            {
-                movies.map((movie:any) => (
-                    <li key={movie.id}>
-                        <Link href={`/movie/${movie.id}`}><h1>{movie.title}</h1></Link>
-                    </li>
-                ))}
+        {
+            movies.map((movie:any) => (
+                <li key={movie.id}>
+                    <Link href={`/movie/${movie.id}`}><h1>{movie.title}</h1></Link>
+                </li>
+            ))}
         </ul>
+
     );
 }

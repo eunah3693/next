@@ -1,6 +1,13 @@
-//데이터를 가져오기전에 로딩중이라는 메시지를 보여주는 컴포넌트
-export default function Loading() {
+import Image from 'next/image'
+import loading_img from '../../public/icon/loading.gif';
+
+export default function Page() {
     return (
-        <h1>Loading...</h1>
-    );
+        <Image
+            src={loading_img}
+            alt="Picture of the author"
+            width={50} 
+            height={50} 
+        />
+    )
 }
