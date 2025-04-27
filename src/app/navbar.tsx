@@ -1,6 +1,6 @@
 import Navbar_Component from "../component/Navbar";
 
-const Link_Info = [
+const Link_data = [
     {"href":"/tire","name":"SHOP"},
     {"href":"/board","name":"COMMUNITY"},
     {"href":"/login","name":"LOGIN"},
@@ -9,7 +9,7 @@ const Link_Info = [
 function Navbar() {
   return (
     <div>
-        <Navbar_Component navItems={Link_Info}></Navbar_Component>
+        <Navbar_Component navItems={Link_data}></Navbar_Component>
     </div>
   );
 }

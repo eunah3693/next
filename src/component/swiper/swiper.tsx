@@ -1,0 +1,21 @@
+"use client"; 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
+
+export default function Swiper_Component({slideData, viewNumber}:any){
+  return (
+    <Swiper
+      spaceBetween={50}
+      slidesPerView={viewNumber}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+    {slideData.map((item, index) => (
+        <SwiperSlide key={index}>
+          <img src={item.img}></img>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
+};
