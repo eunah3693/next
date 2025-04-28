@@ -1,8 +1,11 @@
+
 import Swiper_Component from "../../component/swiper/swiper";
 import Swiper_Product_Component from "../../component/swiper/swiper_product";
 import Community_table_Component from "../../component/table/community_table";
 import Footer_Component from "../../component/footer";
 
+// todo : data type 지정, props 추가 
+// todo : tailwind.css 사용해서 수정
 const bannerData=[
     {"img":"https://blackcircles-data.s3.ap-northeast-2.amazonaws.com/data/banner/2025022817143917407304793703.png"},
     {"img":"https://blackcircles-data.s3.ap-northeast-2.amazonaws.com/data/banner/2025022817143917407304793703.png"},
@@ -21,12 +24,12 @@ const tableData=[
     {"title":"2","date":"2025-01-01"},
 ]
 const footerData={"name":"eunah","address":"dd","phone":"010"}
-export default async function Main() {
 
+export default async function Main() {
     return (
         <div>
             {/* banner */}
-            <Swiper_Component slideData={bannerData} viewNumber={1}></Swiper_Component>
+            <Swiper_Component slideData={bannerData} viewNumber={1} count={1}></Swiper_Component>
             <span>추천상품</span>
             <Swiper_Product_Component slideData={recommendData} viewNumber={5}></Swiper_Product_Component>
             <span>인기상품</span>

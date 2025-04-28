@@ -4,7 +4,7 @@ import Image from 'next/image';
 import hamburger_img from "../../public/icon/hamburger.svg"
 import { useState } from 'react';
 
-
+// todo : navbar css수정 
 export default function Navbar_Component({navItems}: any){
   const [navbar, setNavbar] = useState(false);
   return (
