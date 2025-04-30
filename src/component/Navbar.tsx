@@ -8,13 +8,13 @@ import { useState } from 'react';
 export default function Navbar_Component({navItems}: any){
   const [navbar, setNavbar] = useState(false);
   return (
-    <div>
-      <nav className="w-full fixed top-0 left-0 right-0 z-10">
+    <div className='pb-20'>
+      <nav className="w-full fixed top-0 left-0 right-0 z-10 bg-white">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
-            <div className="flex items-center justify-between py-3 md:py-5 md:block">
+            <div className="flex items-center justify-between py-3 md:py-5 md:block  text-stone-600">
               <Link href="/">
-                <h2 className="text-2xl text-cyan-600 font-bold ">Tire</h2>
+                <h2 className="text-2xl font-bold">TIRE</h2>
               </Link>
                <div className="md:hidden">
                 <button
@@ -44,7 +44,7 @@ export default function Navbar_Component({navItems}: any){
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex ">
                 {navItems.map((item, index) => (
-                    <li key={index} className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                    <li key={index} className="pb-4 text-l  text-stone-600 py-4 md:px-4 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                       <Link href={item.href} onClick={() => setNavbar(!navbar)}>
                       {item.name}
                       </Link>

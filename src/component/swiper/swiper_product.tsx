@@ -10,6 +10,7 @@ export default function Swiper_Product_Component({slideData, viewNumber}:any){
       slidesPerView={viewNumber}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
+      allowTouchMove={false}
     >
     {slideData.map((item, index) => (
         <SwiperSlide key={index}>

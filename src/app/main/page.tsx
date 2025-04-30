@@ -23,20 +23,29 @@ const tableData=[
     {"title":"1","date":"2025-01-01"},
     {"title":"2","date":"2025-01-01"},
 ]
-const footerData={"name":"eunah","address":"dd","phone":"010"}
+
 
 export default async function Main() {
     return (
         <div>
-            {/* banner */}
-            <Swiper_Component slideData={bannerData} viewNumber={1} count={1}></Swiper_Component>
-            <span>추천상품</span>
-            <Swiper_Product_Component slideData={recommendData} viewNumber={5}></Swiper_Product_Component>
-            <span>인기상품</span>
-            <Swiper_Product_Component slideData={recommendData} viewNumber={5}></Swiper_Product_Component>
-            <span>커뮤니티</span>
-            <Community_table_Component tableData={tableData}></Community_table_Component>
-            <Footer_Component footerData={footerData}></Footer_Component>
+            <div className="w-full lg:max-w-7xl mx-auto">
+                {/* banner */}
+                <Swiper_Component slideData={bannerData} viewNumber={1} count={1}></Swiper_Component>
+                <h5 className="ps-10 py-10 pb-5 text-lg">추천상품</h5>
+                <Swiper_Product_Component slideData={recommendData} viewNumber={5}></Swiper_Product_Component>
+                <h5 className="ps-10 py-10 pb-5 text-lg">인기상품</h5>
+                <Swiper_Product_Component slideData={recommendData} viewNumber={5}></Swiper_Product_Component>
+                <div className="flex justify-between pb-10">
+                    <div className="flex-1">
+                        <h5 className="ps-10 py-10 pb-5 text-lg">커뮤니티</h5>
+                        <Community_table_Component tableData={tableData}></Community_table_Component>
+                    </div>
+                    <div className="flex-1">
+                        <h5 className="ps-10 py-10 pb-5 text-lg">커뮤니티</h5>
+                        <Community_table_Component tableData={tableData}></Community_table_Component>
+                    </div>
+                </div>
+            </div>
         </div>
 
     );
