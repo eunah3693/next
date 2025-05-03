@@ -1,60 +1,70 @@
-"use client"; 
-import Link from 'next/link';
-import Image from 'next/image';
-import hamburger_img from "../../public/icon/hamburger.svg"
-import { useState } from 'react';
+// "use client"; 
+// import Link from 'next/link';
+// import Image from 'next/image';
+// import hamburger_img from "../../public/icon/hamburger.svg"
+// import { useState } from 'react';
 
-// todo : navbar css수정 
-export default function Navbar_Component({navItems}: any){
-  const [navbar, setNavbar] = useState(false);
+// // todo : navbar css수정 
+// export default function Navbar_Component({navItems}: any){
+//   const [navbar, setNavbar] = useState(false);
+//   return (
+//     <div className='pb-20'>
+//       <nav className="w-full fixed top-0 left-0 right-0 z-10 bg-white">
+//         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+//           <div>
+//             <div className="flex items-center justify-between py-3 md:py-5 md:block  text-stone-600">
+//               <Link href="/">
+//                 <h2 className="text-2xl font-bold">TIRE</h2>
+//               </Link>
+//                <div className="md:hidden">
+//                 <button
+//                   className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+//                   onClick={() => setNavbar(!navbar)}
+//                 >
+//                   {navbar ? (
+//                     <Image src={hamburger_img} width={30} height={30} alt="logo" />
+//                   ) : (
+//                     <Image
+//                       src={hamburger_img}
+//                       width={30}
+//                       height={30}
+//                       alt="logo"
+//                       className="focus:border-none active:border-none"
+//                     />
+//                   )}
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//           <div>
+//             <div
+//               className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+//                 navbar ? 'p-12 md:p-0 block' : 'hidden'
+//               }`}
+//             >
+//               <ul className="h-screen md:h-auto items-center justify-center md:flex ">
+//                 {/* {navItems.map((item, index) => (
+//                     <li key={index} className="pb-4 text-l  text-stone-600 py-4 md:px-4 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+//                       <Link href={item.href} onClick={() => setNavbar(!navbar)}>
+//                       {item.name}
+//                       </Link>
+//                     </li>
+//                 ))} */}
+//               </ul>
+//             </div>
+//           </div>
+//         </div>
+//       </nav>
+//     </div>
+//   );
+// };
+
+
+export default function Community() {
+
   return (
-    <div className='pb-20'>
-      <nav className="w-full fixed top-0 left-0 right-0 z-10 bg-white">
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-          <div>
-            <div className="flex items-center justify-between py-3 md:py-5 md:block  text-stone-600">
-              <Link href="/">
-                <h2 className="text-2xl font-bold">TIRE</h2>
-              </Link>
-               <div className="md:hidden">
-                <button
-                  className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                  onClick={() => setNavbar(!navbar)}
-                >
-                  {navbar ? (
-                    <Image src={hamburger_img} width={30} height={30} alt="logo" />
-                  ) : (
-                    <Image
-                      src={hamburger_img}
-                      width={30}
-                      height={30}
-                      alt="logo"
-                      className="focus:border-none active:border-none"
-                    />
-                  )}
-                </button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div
-              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                navbar ? 'p-12 md:p-0 block' : 'hidden'
-              }`}
-            >
-              <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                {navItems.map((item, index) => (
-                    <li key={index} className="pb-4 text-l  text-stone-600 py-4 md:px-4 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                      <Link href={item.href} onClick={() => setNavbar(!navbar)}>
-                      {item.name}
-                      </Link>
-                    </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
+      <div>
+    dd
+      </div>
   );
-};
+}

@@ -1,8 +1,17 @@
 
 
 
-export default function Community_detail({ id }: any){
+// export default function Community_detail({ id }: any){
+//   return (
+//     <div>{id}</div>
+//   );
+// };
+
+export default function Community() {
+
   return (
-    <div>{id}</div>
+      <div>
+    dd
+      </div>
   );
-};
+}
