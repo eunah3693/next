@@ -14,7 +14,7 @@ interface NavbarProps {
 }
 
 // todo : navbar css수정 
-export default function Navbar({ navItems }: NavbarProps) {
+export default function NavbarComponent({ navItems }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
