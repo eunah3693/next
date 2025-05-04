@@ -1,6 +1,11 @@
-import Navbar_Component from "../component/navbar";
+import NavbarComponent from "../component/navbar";
 
-const Link_data = [
+interface NavItem {
+  href: string;
+  name: string;
+}
+
+const Link_data: NavItem[] = [
     {"href":"/tire","name":"SHOP"},
     {"href":"/board","name":"COMMUNITY"},
     {"href":"/login","name":"LOGIN"},
@@ -9,7 +14,7 @@ const Link_data = [
 function Navbar() {
   return (
     <div>
-        <Navbar_Component navItems={Link_data}></Navbar_Component>
+        <NavbarComponent navItems={Link_data} />
     </div>
   );
 }
