@@ -1,9 +1,15 @@
-// import { create } from 'zustand'
+import { create } from 'zustand'
 
-// const useStore = create((set) => ({
-//     count: 0,
-//     increment: () => set((state) => ({ count: state.count + 1 })),
-//     decrement: () => set((state) => ({ count: state.count - 1 })),
-// }));
+interface MainBannerState {
+  count: number;
+  increment: () => void;
+  decrement: () => void;
+}
 
-// export default useStore;
+const useStore = create<MainBannerState>((set) => ({
+  count: 0,
+  increment: () => set((state: MainBannerState) => ({ count: state.count + 1 })),
+  decrement: () => set((state: MainBannerState) => ({ count: state.count - 1 })),
+}));
+
+export default useStore;

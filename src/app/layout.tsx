@@ -1,26 +1,26 @@
 import type { Metadata } from "next";
-// import Navbar from "./navbar";
+import Navbar from "./navbar";
 import "./globals.css";
 import "tailwindcss";
-// import Footer_Component from "../component/footer";
+import Footer_Component from "../component/footer";
 
 export const metadata: Metadata = {
     title: "Tire",
     description: "Pick your tire",
 };
 
-// export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
-//     return (
-//         <html lang="en">
-//         <body
-//         >
-//         <Navbar></Navbar>
-//         {children}
-//         <Footer_Component></Footer_Component>
-//         </body>
-//         </html>
-//     );
-// }
+export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
+    return (
+        <html lang="en">
+        <body
+        >
+        <Navbar></Navbar>
+        {children}
+        <Footer_Component></Footer_Component>
+        </body>
+        </html>
+    );
+}
 //[리액트와 넥스트]
 // 1. 리액트
 // 클라이언트 사이드 랜더링, 데이터 페칭 내장기능이 없어서 라이브러리 사용
@@ -41,13 +41,3 @@ export const metadata: Metadata = {
 
 // 3. 클라이언트사이드렌더링 CSR
 // 클라이언트에서 JavaScript를 실행하여서 HTML을 생성
-export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
-    return (
-        <html lang="en">
-        <body
-        >
-        {children}
-        </body>
-        </html>
-    );
-}
