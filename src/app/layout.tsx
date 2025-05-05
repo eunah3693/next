@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Navbar from "@/component/navbar";
+import Navbar from "../component/navbar";
 import "./globals.css";
 import "tailwindcss";
-import Footer from "@/component/footer";
+import Footer from "../component/footer";
 
 export const metadata: Metadata = {
     title: "Tire",
