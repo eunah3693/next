@@ -5,16 +5,18 @@ import hamburger_img from "../../public/icon/hamburger.svg"
 import { useState } from 'react';
 
 interface NavItem {
-  name: string;
   href: string;
+  name: string;
 }
 
-interface NavbarProps {
-  navItems: NavItem[];
-}
+const Link_data: NavItem[] = [
+    {"href":"/tire","name":"SHOP"},
+    {"href":"/board","name":"COMMUNITY"},
+    {"href":"/login","name":"LOGIN"},
+]
 
 // todo : navbar css수정 
-export default function NavbarComponent({ navItems }: NavbarProps) {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -50,7 +52,7 @@ export default function NavbarComponent({ navItems }: NavbarProps) {
               }`}
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex space-y-4 md:space-y-0">
-                {navItems.map((item, index) => (
+                {Link_data.map((item, index) => (
                   <li 
                     key={index} 
                     className="pb-4 text-l text-stone-600 py-4 md:px-4 text-center border-b-2 md:border-b-0 hover:bg-purple-900 border-purple-900 md:hover:text-purple-600 md:hover:bg-transparent transition-colors duration-200"
