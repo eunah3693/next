@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import Navbar from "../component/navbar";
 import "./globals.css";
-import "tailwindcss";
-import Footer from "../component/footer";
 
 export const metadata: Metadata = {
     title: "Tire",
@@ -14,9 +11,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
         <html lang="en">
         <body
         >
-        <Navbar></Navbar>
         {children}
-        <Footer></Footer>
         </body>
         </html>
     );
