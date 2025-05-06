@@ -16,7 +16,7 @@ const Link_data: NavItem[] = [
 ]
 
 // todo : navbar css수정 
-export default function Navbar() {
+export default function NavbarComponent() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

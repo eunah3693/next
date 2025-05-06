@@ -4,7 +4,7 @@ interface FooterData {
   phone: string;
 }
 
-export default function Footer() {
+export default function FooterComponent() {
   const footerData: FooterData = {
     name: "eunah",
     address: "dd",

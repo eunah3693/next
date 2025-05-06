@@ -1,8 +1,8 @@
 import SwiperComponent from "../component/swiper/swiper";
 import SwiperProduct from "../component/swiper/swiperProduct";
 import CommunityTable from "../component/table/communityTable";
-import Navbar from "../component/navbar";
-import Footer from "../component/footer";
+import NavbarComponent from "../component/navbar";
+import FooterComponent from "../component/footer";
 
 interface BannerData {
   img: string;
@@ -41,7 +41,7 @@ const tableData: TableData[] = [
 export default function Main() {
   return (
     <div>
-      <Navbar></Navbar>
+      <NavbarComponent></NavbarComponent>
       <div className="w-full lg:max-w-7xl mx-auto">
         {/* Banner Section */}
         <SwiperComponent 
@@ -79,7 +79,7 @@ export default function Main() {
           </div>
         </div>
       </div>
-      <Footer></Footer>
+      <FooterComponent></FooterComponent>
     </div>
   );
 }
