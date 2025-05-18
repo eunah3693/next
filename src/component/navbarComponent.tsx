@@ -1,7 +1,6 @@
 "use client"; 
 import Link from 'next/link';
 import Image from 'next/image';
-import hamburger_img from "../../public/icon/hamburger.svg"
 import { useState } from 'react';
 
 interface NavItem {
@@ -35,7 +34,7 @@ export default function Nav() {
                   aria-label="Toggle menu"
                 >
                   <Image 
-                    src={hamburger_img} 
+                    src="/icon/hamburger.svg"
                     width={30} 
                     height={30} 
                     alt="Menu" 
