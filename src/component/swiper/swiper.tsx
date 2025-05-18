@@ -1,6 +1,7 @@
 "use client"; 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import Image from 'next/image';
 // import useStore from '../../store/useMainBanner';
 
 interface BannerData {
@@ -30,9 +31,11 @@ export default function SwiperComponent({ slideData, viewNumber }: SwiperProps) 
       >
         {slideData.map((item: BannerData, index: number) => (
           <SwiperSlide key={index}>
-            <img 
+            <Image 
               src={item.img} 
               alt={`Banner ${index + 1}`}
+              width={100}
+              height={100}
               className="w-full h-auto object-cover"
             />
           </SwiperSlide>

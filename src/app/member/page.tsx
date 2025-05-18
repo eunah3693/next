@@ -1,10 +1,4 @@
 
-
-interface memberData {
-  name: string;
-  img: string;
-}
-
 export default function Shopping() {
   return (
     <div>
