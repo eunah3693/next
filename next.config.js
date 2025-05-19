@@ -1,15 +1,31 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+    NEXT_PUBLIC_API_URL: 'http://localhost:8080',
   },
   async rewrites() {
     return [
       {
         source: '/api/:path*',
-        destination: `${process.env.NEXT_PUBLIC_API_URL}/:path*`,
+        destination: 'http://localhost:8080/:path*',
       },
     ];
+  },
+  images: {
+    domains: ['localhost', 'blackcircles-data.s3.ap-northeast-2.amazonaws.com'],
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '8080',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'blackcircles-data.s3.ap-northeast-2.amazonaws.com',
+        pathname: '/**',
+      },
+    ],
   },
 }
 
