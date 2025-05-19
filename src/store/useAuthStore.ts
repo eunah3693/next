@@ -13,19 +13,22 @@ interface AuthState {
   logout: () => void;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+// API URL 설정
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
 
 export const useAuthStore = create<AuthState>((set) => ({
   user: null,
   isAuthenticated: false,
   login: async (id: string, password: string) => {
     try {
+      console.log('Attempting to login to:', `${API_URL}/member/login`); // 디버깅용 로그
+      
       const response = await fetch(`${API_URL}/member/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        credentials: 'include', // 쿠키를 포함하여 요청
+        credentials: 'include',
         body: JSON.stringify({ id, password }),
       });
 
