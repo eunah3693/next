@@ -12,11 +12,11 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: ['localhost', 'blackcircles-data.s3.ap-northeast-2.amazonaws.com'],
+    domains: ['43.203.60.53', 'blackcircles-data.s3.ap-northeast-2.amazonaws.com'],
     remotePatterns: [
       {
         protocol: 'http',
-        hostname: 'localhost',
+        hostname: '43.203.60.53',
         port: '8080',
         pathname: '/**',
       },
@@ -27,6 +27,8 @@ const nextConfig = {
       },
     ],
   },
+  output: 'standalone',
+  assetPrefix: 'http://43.203.60.53',
 }
 
 // import type { NextConfig } from "next";
