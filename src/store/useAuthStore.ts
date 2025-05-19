@@ -13,12 +13,14 @@ interface AuthState {
   logout: () => void;
 }
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 export const useAuthStore = create<AuthState>((set) => ({
   user: null,
   isAuthenticated: false,
   login: async (id: string, password: string) => {
     try {
-      const response = await fetch('http://localhost:8080/member/login', {
+      const response = await fetch(`${API_URL}/member/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
