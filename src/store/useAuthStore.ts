@@ -14,7 +14,7 @@ interface AuthState {
 }
 
 // API URL을 직접 지정
-const API_URL = 'http://localhost:8080';
+const API_URL = 'http://43.203.60.53:8080';
 
 export const useAuthStore = create<AuthState>((set) => ({
   user: null,

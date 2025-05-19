@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    NEXT_PUBLIC_API_URL: 'http://localhost:8080',
+    NEXT_PUBLIC_API_URL: 'http://43.203.60.53:8080',
   },
   async rewrites() {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://localhost:8080/:path*',
+        destination: 'http://43.203.60.53:8080/:path*',
       },
     ];
   },
